@@ -10,6 +10,20 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
+//= require jquery_ujs
 //= require rails-ujs
-
 //= require_tree .
+
+$(document).ready(function(){
+    $('#div1').hide();
+
+    $( '#show' ).click(function() {
+        $('#div1').show();
+    });
+
+    $( '#cancel' ).click(function() {
+        $('#div1').hide();
+    });
+});
+

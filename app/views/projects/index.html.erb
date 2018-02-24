@@ -1,0 +1,37 @@
+<h1>Задачи</h1>
+ 
+<% @projects.each do |project| %>
+ <p>
+  <h2><%= project.title %></h2>
+   <ul>
+    <% project.todos.each do |todos| %>
+   <li>
+    <%= todos.text %>
+   </li>
+    <% end %>
+  </ul>
+    
+ </p>
+<% end %>
+
+<h1 id="newTask">Новая задача</h1>
+
+<%= link_to image_tag('addTodoIcon.png'), "#", id:'show' %>
+
+<div id="div1">
+
+  <%= form_tag('/todos/create', method: 'get', :id => 'form_id') do %>
+
+      <%= text_field_tag(:new_todo)%><br>
+      <%= select_tag(:project_id , options_from_collection_for_select(@projects, :id, :title))%><br>
+      <%= link_to 'OK', "#", :onclick => "document.getElementById('form_id').submit()" %>
+      <%= link_to 'Отмена', "#", id:'cancel' %>
+
+  <% end %>
+</div>
+
+ 
+
+ 
+
+
