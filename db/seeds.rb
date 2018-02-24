@@ -8,7 +8,7 @@
 seed_file = Rails.root.join('db', 'seeds.yml')
 data = HashWithIndifferentAccess.new(YAML.load_file(seed_file))
 data["projects"].each do |project|
-  p = Project.create(title:project["title"]) #не добавлять ?
+  p = Project.create(title:project["title"])
   project["todos"].each do |todo|
     t= Todo.create(text:todo["text"], isCompleted:todo["isCompleted"])
     p.todos<<t
