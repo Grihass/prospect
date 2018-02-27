@@ -1,36 +1,56 @@
-<h1>Задачи</h1>
+
+
+
+<div id="header">
+ <h1 id="title1">Задачи</h1>
+<%= link_to image_tag('addTodoIcon.png'), "#", id:'show' %>
+</div>
+
+
+<div class = "container-fluid">
+<div class = "row">
+
+
+ <% @projects.each do |project| %>
+  <div class="col-lg-4 col-md-6"> 
+   <div id="proj">
  
-<% @projects.each do |project| %>
- <p>
-  <h2><%= project.title %></h2>
-   <ul>
-    <% project.todos.each do |todos| %>
-   <li>
-    <%= todos.text %>
-   </li>
-    <% end %>
-  </ul>
+   <h3><%= project.title %></h3>
+    <ul id="drag">
+     <% project.todos.each do |todos| %>
     
- </p>
+       <li class="list1" id="data_<%= todos.id %>">
+         <div>
+           <input type="checkbox" class="chkbx" id="data_<%= todos.id %>">
+         </div>
+        <li class="list2" id="task_data_<%= todos.id %>"><%= todos.text %></li>
+       </li>
+     <% end %>
+    </ul>
+
+   </div>    
+ 
+  </div>
 <% end %>
 
-<h1 id="newTask">Новая задача</h1>
+</div>
+</div>
 
-<%= link_to image_tag('addTodoIcon.png'), "#", id:'show' %>
+
+
+
 
 <div id="div1">
-
+<h2 id="newTask" >Новая задача</h2>
   <%= form_tag('/todos/create', method: 'get', :id => 'form_id') do %>
 
       <%= text_field_tag(:new_todo)%><br>
       <%= select_tag(:project_id , options_from_collection_for_select(@projects, :id, :title))%><br>
-      <%= link_to 'OK', "#", :onclick => "document.getElementById('form_id').submit()" %>
-      <%= link_to 'Отмена', "#", id:'cancel' %>
+      <%= link_to 'OK', "", :onclick => "document.getElementById('form_id').submit()" %>
+      <%= link_to 'Отмена', "", id:'cancel' %>
 
   <% end %>
 </div>
-
- 
 
  
 

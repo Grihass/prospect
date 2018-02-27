@@ -1,0 +1,12 @@
+{
+  "vars": {
+    "@grid-columns": "12",
+    "@grid-gutter-width": "30"
+  },
+  "css": [
+    "grid.less",
+    "responsive-utilities.less"
+  ],
+  "js": [],
+  "customizerUrl": "https://getbootstrap.com/docs/3.3/customize/?id=c294d89b6345fb91f3d2a87b7ed67f4b"
+}

@@ -25,5 +25,22 @@ $(document).ready(function(){
     $( '#cancel' ).click(function() {
         $('#div1').hide();
     });
+  $('input').iCheck({
+    checkboxClass: 'icheckbox_square-blue',
+    radioClass: 'iradio_square-blue',
+    increaseArea: '20%' // optional
+  });
+
+
+$(".chkbx").click(function(){
+// назначаем обработку события onClick для каждого элемента класса "click"
+   // и получаем его id
+   id_click = this.attr("id");
+
+  $( id_click ).on('ifChecked', function(event){
+    
+      $('#task_'+id_click).css('text-decoration','line-through')
+  });
+});
 });
 

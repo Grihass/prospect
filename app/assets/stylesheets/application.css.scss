@@ -1,0 +1,95 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+@font-face { font-family: OpenSans; src: url('OpenSans-Regular.ttf') format('truetype'); } 
+@font-face { font-family: OpenSans; font-weight: bold; src: url('OpenSans-Semibold.ttf') format('truetype'); }
+@font-face { font-family: OpenSans; font-weight: light; src: url('OpenSans-Light.ttf') format('truetype'); }
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: OpenSans;
+}
+
+#title1 {
+    
+   font-family: OpenSans;
+    margin-left: 46%;
+    margin-right: 54%;
+    line-height: 40px;
+    vertical-align: middle;
+    position: absolute;
+    vertical-align: middle;color: white;
+}
+
+#header {
+	position: relative;
+	margin-left: -1%;
+	margin-top: -10px;
+	height: 80px;
+	width: 102%;
+	background-color: #88c0fc;
+	
+}
+
+#show {
+	position: absolute;
+	top: 30px;
+	right: 40px;
+}
+
+#proj {
+	border: 1px solid black;
+  
+
+  /*overflow: auto;
+  float: left*/
+  margin: 2em;
+  padding: 0px 20px 20px 20px;
+-webkit-box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.25);
+-moz-box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.25);
+box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.25);
+}
+
+.list1 {
+	width: 200px;
+	list-style-type: none;
+	margin-left: -40px;
+	margin-top: 20px;
+}
+#fluides {
+	border: 1px solid black;
+  
+}
+
+.list2 {
+list-style-type: none;
+margin-left: 10px;
+margin-top: -22px;
+width: 200px;
+}
+
+
+
+#div1 { 
+	clear: both;
+}
+
+
+
+
