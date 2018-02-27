@@ -87,9 +87,26 @@ width: 200px;
 
 
 #div1 { 
-	clear: both;
+	
 }
 
+.cn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+z-index: 10; 
+backgtound-color: rgba(0,0,0,0.9);
+}
 
+.inner {
+  z-index: 100;
+  border: 1px solid black;
+  backgtound-color: black;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 400px;
+  height: 200px;
 
+}
 
